@@ -14,3 +14,8 @@ log('table data was saved in a dataframe')
 
 data.dropna(subset=['Bank name'], inplace=True) #This removes any blank values in the specified column
 log('removed blank values in the specified column')
+
+# save outputs
+file_name = 'outputs.csv'
+log_file_name = "log.txt"
+data.to_csv(file_name, index=False, encoding='utf-8')
